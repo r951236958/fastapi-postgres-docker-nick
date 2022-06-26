@@ -85,13 +85,13 @@ jobs:
         uses: steinskeeper/heroku-deploy@latest
         with:
           # Email Linked to your Heroku Account
-          email: 'heroku email id'
+          email: ${{ secrets.HEROKU_EMAIL }}
           # Heroku Dyno Formation
 
           # Your Heroku API Key
-          api_key: 'API key here'
+          api_key: ${{ secrets.HEROKU_TOKEN }}
           # Your Heroku App Name
-          app_name: 'Heroku APP name here'
+          app_name: ${{ secrets.HEROKU_APP_NAME }}
           # Dokerfile path
           dockerfile_path: '.'
     # Optional build parameters
