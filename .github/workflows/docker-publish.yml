@@ -15,7 +15,7 @@ on:
 
 env:
   # TODO: Change variable to your image's name.
-  IMAGE_NAME: NAMEOFIMAGE
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   # Run tests.
@@ -81,15 +81,14 @@ jobs:
       - name: Deploy Docker Image to Heroku App
         uses: steinskeeper/heroku-deploy@latest
         with:
-    # Email Linked to your Heroku Account
+          # Email Linked to your Heroku Account
           email: 'heroku email id'
-    # Heroku Dyno Formation
-     
-    # Your Heroku API Key
+          # Heroku Dyno Formation
+
+          # Your Heroku API Key
           api_key: 'API key here'
-    # Your Heroku App Name
+          # Your Heroku App Name
           app_name: 'Heroku APP name here'
-   # Dokerfile path
+          # Dokerfile path
           dockerfile_path: '.'
     # Optional build parameters
-          
